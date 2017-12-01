@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A041904A1FD127840084D78E /* ALControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190491FD127840084D78E /* ALControllerManager.m */; };
 		A04190501FD128730084D78E /* ALBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A041904F1FD128730084D78E /* ALBasicViewController.m */; };
+		A04190531FD12BF70084D78E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190521FD12BF70084D78E /* TestView.m */; };
 		A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA191FD1015D007C139E /* AppDelegate.m */; };
 		A0C9AA1D1FD1015D007C139E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA1C1FD1015D007C139E /* ViewController.m */; };
 		A0C9AA201FD1015E007C139E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C9AA1E1FD1015E007C139E /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		A04190491FD127840084D78E /* ALControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALControllerManager.m; sourceTree = "<group>"; };
 		A041904E1FD128730084D78E /* ALBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBasicViewController.h; sourceTree = "<group>"; };
 		A041904F1FD128730084D78E /* ALBasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALBasicViewController.m; sourceTree = "<group>"; };
+		A04190511FD12BF70084D78E /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		A04190521FD12BF70084D78E /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		A0C9AA151FD1015D007C139E /* AnimationLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C9AA181FD1015D007C139E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0C9AA191FD1015D007C139E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		A041904B1FD128350084D78E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A04190511FD12BF70084D78E /* TestView.h */,
+				A04190521FD12BF70084D78E /* TestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04190531FD12BF70084D78E /* TestView.m in Sources */,
 				A0C9AA1D1FD1015D007C139E /* ViewController.m in Sources */,
 				A0C9AA281FD1015E007C139E /* main.m in Sources */,
 				A04190501FD128730084D78E /* ALBasicViewController.m in Sources */,
