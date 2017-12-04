@@ -8,7 +8,7 @@
 
 #import "ALControllerManager.h"
 #import "ALBasicViewController.h"
-
+#import "QDDDAnimationTextViewController.h"
 @implementation ALControllerManager
 
 + (instancetype)sharedInstance
@@ -33,6 +33,10 @@
         
         viewController = [[ALBasicViewController alloc] init];
         
+    }else if ([title isEqualToString:@"效果11_DD"] || [title isEqualToString:@"效果1_DD"]) {
+        
+        viewController = [[QDDDAnimationTextViewController alloc] init];
+        viewController.title = title;
     }
     
     

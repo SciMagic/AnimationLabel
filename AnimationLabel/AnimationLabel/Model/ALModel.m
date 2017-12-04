@@ -47,7 +47,7 @@
 
 - (void)commonInit
 {
-    _data = @[@"效果1",@"效果2",@"效果3"];
+    _data = @[@"效果1",@"效果2",@"效果3",@"效果11_DD",@"效果1_DD"];
 }
 
 - (NSArray *)fetchData

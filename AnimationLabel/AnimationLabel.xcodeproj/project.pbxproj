@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7000C6F41FD13BD0005C94CF /* QDDDAnimationTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C6F31FD13BD0005C94CF /* QDDDAnimationTextViewController.m */; };
+		7000C6F81FD13CBC005C94CF /* QDRunTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C6F71FD13CBC005C94CF /* QDRunTextView.m */; };
+		7000C6FB1FD15533005C94CF /* QDRotateFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C6FA1FD15533005C94CF /* QDRotateFlyView.m */; };
+		70DD99C31FD4F6AB009AE5DA /* CBJStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DD99C21FD4F6AB009AE5DA /* CBJStrokeLabel.m */; };
 		A041904A1FD127840084D78E /* ALControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190491FD127840084D78E /* ALControllerManager.m */; };
 		A04190501FD128730084D78E /* ALBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A041904F1FD128730084D78E /* ALBasicViewController.m */; };
 		A04190531FD12BF70084D78E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190521FD12BF70084D78E /* TestView.m */; };
@@ -20,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7000C6F21FD13BD0005C94CF /* QDDDAnimationTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QDDDAnimationTextViewController.h; sourceTree = "<group>"; };
+		7000C6F31FD13BD0005C94CF /* QDDDAnimationTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDDDAnimationTextViewController.m; sourceTree = "<group>"; };
+		7000C6F61FD13CBC005C94CF /* QDRunTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QDRunTextView.h; sourceTree = "<group>"; };
+		7000C6F71FD13CBC005C94CF /* QDRunTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDRunTextView.m; sourceTree = "<group>"; };
+		7000C6F91FD15533005C94CF /* QDRotateFlyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QDRotateFlyView.h; sourceTree = "<group>"; };
+		7000C6FA1FD15533005C94CF /* QDRotateFlyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDRotateFlyView.m; sourceTree = "<group>"; };
+		70DD99C11FD4F6AB009AE5DA /* CBJStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBJStrokeLabel.h; sourceTree = "<group>"; };
+		70DD99C21FD4F6AB009AE5DA /* CBJStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBJStrokeLabel.m; sourceTree = "<group>"; };
 		A04190481FD127840084D78E /* ALControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALControllerManager.h; sourceTree = "<group>"; };
 		A04190491FD127840084D78E /* ALControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALControllerManager.m; sourceTree = "<group>"; };
 		A041904E1FD128730084D78E /* ALBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBasicViewController.h; sourceTree = "<group>"; };
@@ -51,9 +63,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7000C6F51FD13C90005C94CF /* DDView */ = {
+			isa = PBXGroup;
+			children = (
+				7000C6F61FD13CBC005C94CF /* QDRunTextView.h */,
+				7000C6F71FD13CBC005C94CF /* QDRunTextView.m */,
+				7000C6F91FD15533005C94CF /* QDRotateFlyView.h */,
+				7000C6FA1FD15533005C94CF /* QDRotateFlyView.m */,
+			);
+			path = DDView;
+			sourceTree = "<group>";
+		};
 		A041904B1FD128350084D78E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7000C6F51FD13C90005C94CF /* DDView */,
 				A04190511FD12BF70084D78E /* TestView.h */,
 				A04190521FD12BF70084D78E /* TestView.m */,
 			);
@@ -65,6 +89,8 @@
 			children = (
 				A041904E1FD128730084D78E /* ALBasicViewController.h */,
 				A041904F1FD128730084D78E /* ALBasicViewController.m */,
+				7000C6F21FD13BD0005C94CF /* QDDDAnimationTextViewController.h */,
+				7000C6F31FD13BD0005C94CF /* QDDDAnimationTextViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -95,6 +121,8 @@
 				A0C9AA191FD1015D007C139E /* AppDelegate.m */,
 				A0C9AA1B1FD1015D007C139E /* ViewController.h */,
 				A0C9AA1C1FD1015D007C139E /* ViewController.m */,
+				70DD99C11FD4F6AB009AE5DA /* CBJStrokeLabel.h */,
+				70DD99C21FD4F6AB009AE5DA /* CBJStrokeLabel.m */,
 				A0C9AA1E1FD1015E007C139E /* Main.storyboard */,
 				A0C9AA211FD1015E007C139E /* Assets.xcassets */,
 				A0C9AA231FD1015E007C139E /* LaunchScreen.storyboard */,
@@ -188,11 +216,15 @@
 			files = (
 				A04190531FD12BF70084D78E /* TestView.m in Sources */,
 				A0C9AA1D1FD1015D007C139E /* ViewController.m in Sources */,
+				70DD99C31FD4F6AB009AE5DA /* CBJStrokeLabel.m in Sources */,
 				A0C9AA281FD1015E007C139E /* main.m in Sources */,
 				A04190501FD128730084D78E /* ALBasicViewController.m in Sources */,
+				7000C6F81FD13CBC005C94CF /* QDRunTextView.m in Sources */,
 				A041904A1FD127840084D78E /* ALControllerManager.m in Sources */,
+				7000C6FB1FD15533005C94CF /* QDRotateFlyView.m in Sources */,
 				A0C9AA311FD10508007C139E /* ALModel.m in Sources */,
 				A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */,
+				7000C6F41FD13BD0005C94CF /* QDDDAnimationTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3Y4E4975U;
 				INFOPLIST_FILE = AnimationLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hacky.AnimationLabel;
@@ -340,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3Y4E4975U;
 				INFOPLIST_FILE = AnimationLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hacky.AnimationLabel;
