@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ALCubeTransitionLabel : UILabel
+#import "ALAnimationProtocol.h"
+@interface ALCubeTransitionLabel : UILabel <ALAnimationProtocol>
 
 @property (strong, nonatomic) UIColor *startColor;
 @property (strong, nonatomic) UIColor *endColor;

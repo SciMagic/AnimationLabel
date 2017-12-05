@@ -36,6 +36,7 @@
 		A025A72F1FD6457400BB68D5 /* QDDDAnimationTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDDDAnimationTextViewController.m; sourceTree = "<group>"; };
 		A025A7311FD6457F00BB68D5 /* CBJStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBJStrokeLabel.h; sourceTree = "<group>"; };
 		A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBJStrokeLabel.m; sourceTree = "<group>"; };
+		A025A7341FD6476F00BB68D5 /* ALAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAnimationProtocol.h; sourceTree = "<group>"; };
 		A04190481FD127840084D78E /* ALControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALControllerManager.h; sourceTree = "<group>"; };
 		A04190491FD127840084D78E /* ALControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALControllerManager.m; sourceTree = "<group>"; };
 		A041904E1FD128730084D78E /* ALBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBasicViewController.h; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 				A04190521FD12BF70084D78E /* TestView.m */,
 				A06878761FD252300010C5DD /* ALCubeTransitionLabel.h */,
 				A06878771FD252300010C5DD /* ALCubeTransitionLabel.m */,
+				A025A7341FD6476F00BB68D5 /* ALAnimationProtocol.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
