@@ -17,6 +17,10 @@
 		A0C9AA251FD1015E007C139E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C9AA231FD1015E007C139E /* LaunchScreen.storyboard */; };
 		A0C9AA281FD1015E007C139E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA271FD1015E007C139E /* main.m */; };
 		A0C9AA311FD10508007C139E /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA301FD10508007C139E /* ALModel.m */; };
+		E4DBF07D1FD286D100823381 /* ALLayoutMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */; };
+		E4DBF0801FD64F8700823381 /* ZCEasingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF07F1FD64F8700823381 /* ZCEasingUtil.m */; };
+		E4DBF0831FD670FC00823381 /* ALSequentialBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF0821FD670FC00823381 /* ALSequentialBaseLabel.m */; };
+		E4DBF0881FD67C1200823381 /* ALLineOneByOneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF0871FD67C1200823381 /* ALLineOneByOneLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,14 @@
 		A0C9AA271FD1015E007C139E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0C9AA2F1FD10508007C139E /* ALModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALModel.h; sourceTree = "<group>"; };
 		A0C9AA301FD10508007C139E /* ALModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALModel.m; sourceTree = "<group>"; };
+		E4DBF07B1FD286D100823381 /* ALLayoutMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLayoutMaker.h; sourceTree = "<group>"; };
+		E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLayoutMaker.m; sourceTree = "<group>"; };
+		E4DBF07E1FD64F8700823381 /* ZCEasingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCEasingUtil.h; sourceTree = "<group>"; };
+		E4DBF07F1FD64F8700823381 /* ZCEasingUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCEasingUtil.m; sourceTree = "<group>"; };
+		E4DBF0811FD670FC00823381 /* ALSequentialBaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALSequentialBaseLabel.h; sourceTree = "<group>"; };
+		E4DBF0821FD670FC00823381 /* ALSequentialBaseLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALSequentialBaseLabel.m; sourceTree = "<group>"; };
+		E4DBF0861FD67C1200823381 /* ALLineOneByOneLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLineOneByOneLabel.h; sourceTree = "<group>"; };
+		E4DBF0871FD67C1200823381 /* ALLineOneByOneLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLineOneByOneLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 		A0C9AA171FD1015D007C139E /* AnimationLabel */ = {
 			isa = PBXGroup;
 			children = (
+				E4DBF07A1FD2819A00823381 /* ALLayoutMaker */,
 				A041904D1FD128540084D78E /* ViewController */,
 				A041904B1FD128350084D78E /* View */,
 				A0C9AA2E1FD104DA007C139E /* Model */,
@@ -113,6 +126,37 @@
 				A04190491FD127840084D78E /* ALControllerManager.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E4DBF07A1FD2819A00823381 /* ALLayoutMaker */ = {
+			isa = PBXGroup;
+			children = (
+				E4DBF0851FD67B6B00823381 /* usableLabels */,
+				E4DBF0841FD67B5C00823381 /* base */,
+			);
+			path = ALLayoutMaker;
+			sourceTree = "<group>";
+		};
+		E4DBF0841FD67B5C00823381 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				E4DBF07E1FD64F8700823381 /* ZCEasingUtil.h */,
+				E4DBF07F1FD64F8700823381 /* ZCEasingUtil.m */,
+				E4DBF07B1FD286D100823381 /* ALLayoutMaker.h */,
+				E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */,
+				E4DBF0811FD670FC00823381 /* ALSequentialBaseLabel.h */,
+				E4DBF0821FD670FC00823381 /* ALSequentialBaseLabel.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		E4DBF0851FD67B6B00823381 /* usableLabels */ = {
+			isa = PBXGroup;
+			children = (
+				E4DBF0861FD67C1200823381 /* ALLineOneByOneLabel.h */,
+				E4DBF0871FD67C1200823381 /* ALLineOneByOneLabel.m */,
+			);
+			path = usableLabels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +232,13 @@
 			files = (
 				A04190531FD12BF70084D78E /* TestView.m in Sources */,
 				A0C9AA1D1FD1015D007C139E /* ViewController.m in Sources */,
+				E4DBF0801FD64F8700823381 /* ZCEasingUtil.m in Sources */,
 				A0C9AA281FD1015E007C139E /* main.m in Sources */,
 				A04190501FD128730084D78E /* ALBasicViewController.m in Sources */,
+				E4DBF0881FD67C1200823381 /* ALLineOneByOneLabel.m in Sources */,
+				E4DBF0831FD670FC00823381 /* ALSequentialBaseLabel.m in Sources */,
 				A041904A1FD127840084D78E /* ALControllerManager.m in Sources */,
+				E4DBF07D1FD286D100823381 /* ALLayoutMaker.m in Sources */,
 				A0C9AA311FD10508007C139E /* ALModel.m in Sources */,
 				A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */,
 			);
