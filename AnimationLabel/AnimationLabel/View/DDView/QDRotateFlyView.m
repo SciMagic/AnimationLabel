@@ -12,14 +12,21 @@
 
 @interface QDRotateFlyView()
 
+@property (nonatomic, copy) NSAttributedString *attributedString;
 
 @property (nonatomic, strong) CBJStrokeLabel *outlineLabel1;
 @property (nonatomic, strong) CBJStrokeLabel *outlineLabel2;
+
+@property (nonatomic, strong) CAAnimation *animation1;
+@property (nonatomic, strong) CAAnimation *animation2;
 
 @end
 
 
 #define LabelSpacing  30
+static NSString  * const animationKey1 = @"animationKey1";
+static NSString  * const animationKey2 = @"animationKey2";
+
 @implementation QDRotateFlyView
 
 
@@ -58,12 +65,12 @@
 {
     return CGSizeMake(attibutedString.size.width, attibutedString.size.height+LabelSpacing*2);
 }
--(void)setAttibutedString:(NSAttributedString *)attibutedString
-{
-    _attibutedString = attibutedString;
-    
-    NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithAttributedString:attibutedString];
 
+-(void)setAttributedText:(NSAttributedString *)attributedText
+{
+    _attributedString = [attributedText copy];
+    NSMutableAttributedString *att = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
+    
     
     CGSize textSize = att.size ;
     CGFloat textWidth = textSize.width;
@@ -76,7 +83,7 @@
     self.outlineLabel1.glowSize = 20;
     self.outlineLabel1.glowColor = [UIColor whiteColor];
     self.outlineLabel1.attributedText = [self.outlineLabel1 composeAttributeString:att withColorArray:@[[UIColor blueColor]]];
-
+    
     CGFloat y2 = CGRectGetMaxY(self.outlineLabel1.frame)+LabelSpacing;
     self.outlineLabel2.frame = CGRectMake(0, y2, textWidth, textSize.height);
     self.outlineLabel2.outlineColor = [UIColor whiteColor];
@@ -84,18 +91,18 @@
     self.outlineLabel2.glowSize = 20;
     self.outlineLabel2.glowColor = [UIColor whiteColor];
     self.outlineLabel2.attributedText = [self.outlineLabel2 composeAttributeString:att withColorArray:@[[UIColor blueColor]]];
-
-//animation1
+    
+    //animation1
     //move
     CAKeyframeAnimation *animationmoveUp1 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     NSArray *values1 = @[
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, -y-textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
-                        ];
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, -y-textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
+                         ];
     animationmoveUp1.values = values1;
     animationmoveUp1.keyTimes = @[@0.0f,@0.3f,@0.425,@0.425,@0.725,@1.f];
     //transform
@@ -115,21 +122,21 @@
     animationGroup1.duration = 3;
     animationGroup1.repeatCount = MAXFLOAT;
     animationGroup1.animations = @[animationmoveUp1,animationTransform1];
-    [self.outlineLabel1.layer addAnimation:animationGroup1 forKey:nil];
+//    [self.outlineLabel1.layer addAnimation:animationGroup1 forKey:nil];
     
-//animation2
+    //animation2
     CAAnimationGroup *animationGroup2 = [CAAnimationGroup animation];
     animationGroup2.duration = 3;
     animationGroup2.repeatCount = MAXFLOAT;
     
     CAKeyframeAnimation *animationmoveUp2 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     NSArray *values2 = @[
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
-                        [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, -y-textHeight/2.0)],
-                        ];
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y2+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, y+textHeight/2.0)],
+                         [NSValue valueWithCGPoint:CGPointMake(textWidth/2.0, -y-textHeight/2.0)],
+                         ];
     animationmoveUp2.values = values2;
     animationmoveUp2.keyTimes = @[@0.0f,@0.3f,@0.425,@0.725,@1.f];
     
@@ -148,9 +155,43 @@
     animationTransform2.keyTimes = @[@0.0f,@0.425f,@0.575f,@0.725,@1.f];
     
     animationGroup2.animations = @[animationmoveUp2,animationTransform2];
-    [self.outlineLabel2.layer addAnimation:animationGroup2 forKey:nil];
+//    [self.outlineLabel2.layer addAnimation:animationGroup2 forKey:nil];
+    self.animation1 = animationGroup1;
+    self.animation2 = animationGroup2;
+}
+
+-(NSAttributedString *)attributedText
+{
+    return [_attributedString copy];
+}
+
+-(void)startALAnimation
+{
+    [self.outlineLabel1.layer removeAnimationForKey:animationKey1];
+    [self.outlineLabel2.layer removeAnimationForKey:animationKey2];
+
+    self.animation1.speed = 1;
+    self.animation2.speed = 1;
+    [self.outlineLabel1.layer addAnimation:self.animation1 forKey:animationKey1];
+    [self.outlineLabel2.layer addAnimation:self.animation2 forKey:animationKey2];
+
+}
+
+-(void)stopALAnimation
+{
+    [self.outlineLabel1.layer removeAnimationForKey:animationKey1];
+    [self.outlineLabel2.layer removeAnimationForKey:animationKey2];
     
 }
 
-
+-(void)setALTimeOffset:(CGFloat)timeOffset
+{
+    self.animation1.speed = 0;
+    self.animation2.speed = 0;
+    self.animation1.timeOffset = timeOffset;
+    self.animation2.timeOffset = timeOffset;
+    [self.outlineLabel1.layer addAnimation:self.animation1 forKey:animationKey1];
+    [self.outlineLabel2.layer addAnimation:self.animation2 forKey:animationKey2];
+    
+}
 @end

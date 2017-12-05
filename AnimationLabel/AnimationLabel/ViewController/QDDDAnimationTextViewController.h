@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QDDDAnimationTextViewController : UIViewController
+#import "ALBasicViewController.h"
+@interface QDDDAnimationTextViewController : ALBasicViewController
 
 @end

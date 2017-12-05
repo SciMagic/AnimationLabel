@@ -71,8 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				A025A7281FD6455300BB68D5 /* QDRotateFlyView.h */,
-				A025A7291FD6455300BB68D5 /* QDRunTextView.h */,
 				A025A72A1FD6455300BB68D5 /* QDRotateFlyView.m */,
+				A025A7291FD6455300BB68D5 /* QDRunTextView.h */,
 				A025A72B1FD6455300BB68D5 /* QDRunTextView.m */,
 			);
 			path = DDView;

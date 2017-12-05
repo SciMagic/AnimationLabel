@@ -9,7 +9,10 @@
 #import "QDDDAnimationTextViewController.h"
 #import "QDRunTextView.h"
 #import "QDRotateFlyView.h"
+#import "ALAnimationProtocol.h"
 @interface QDDDAnimationTextViewController ()
+@property (nonatomic, strong) QDRunTextView *runTextView;
+@property (nonatomic, strong) QDRotateFlyView *rotateView;
 
 @end
 
@@ -33,14 +36,18 @@
     CGSize size = [QDRotateFlyView getSizeWithAttibutedString:att];
     QDRotateFlyView *flyView = [[QDRotateFlyView alloc] initWithFrame:CGRectMake(100, 100, size.width, size.height)];
     [self.view addSubview:flyView];
-    flyView.attibutedString = att;
+    flyView.attributedText = att;
+    self.rotateView = flyView;
 }
 
 - (void)configureRunTextView
 {
-    QDRunTextView *textView = [[QDRunTextView alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+    NSAttributedString *att = [[NSAttributedString alloc] initWithString:@"1234567890" attributes:[self attributes]];
+    CGSize size = [QDRunTextView getSizeWithAttibutedString:att];
+    QDRunTextView *textView = [[QDRunTextView alloc] initWithFrame:CGRectMake(100, 100, size.width, size.height)];
     [self.view addSubview:textView];
-    textView.attibutedString = [[NSAttributedString alloc] initWithString:@"1234567890" attributes:[self attributes]];
+    textView.attributedText = [[NSAttributedString alloc] initWithString:@"1234567890" attributes:[self attributes]];
+    self.runTextView = textView;
 }
 - (NSDictionary *)attributes
 {
@@ -60,4 +67,29 @@
     return attributesDict;
 }
 
+- (id<ALAnimationProtocol>)animationView
+{
+    if (self.runTextView) {
+        return self.runTextView;
+    }else if (self.rotateView)
+    {
+        return self.rotateView;
+    }
+    return nil;
+}
+- (void)startALAnimation
+{
+    
+    [self.animationView startALAnimation];
+}
+
+- (void)stopALAnimation
+{
+    [self.animationView stopALAnimation];
+}
+
+- (void)sliderValueChanged:(UISlider *)slider
+{
+    [self.animationView setALTimeOffset:slider.value];
+}
 @end

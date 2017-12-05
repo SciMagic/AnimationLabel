@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface QDRunTextView : UIView
-
-@property (nonatomic, strong) NSAttributedString *attibutedString;
+#import "ALAnimationProtocol.h"
+@interface QDRunTextView : UILabel<ALAnimationProtocol>
 
 @end

@@ -11,6 +11,7 @@
 @protocol ALAnimationProtocol <NSObject>
 
 @optional
+
 - (void)startALAnimation;
 
 - (void)stopALAnimation;
@@ -20,5 +21,7 @@
 - (void)setALRepeatCount:(NSUInteger)count;
 
 - (void)setALDuration:(CGFloat)duration;
+
++ (CGSize)getSizeWithAttibutedString:(NSAttributedString *)attibutedString;
 
 @end

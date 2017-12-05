@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALAnimationProtocol.h"
+@interface QDRotateFlyView : UILabel<ALAnimationProtocol>
 
-@interface QDRotateFlyView : UIView
-
-@property (nonatomic, strong) NSAttributedString *attibutedString;
-+ (CGSize)getSizeWithAttibutedString:(NSAttributedString *)attibutedString;
 
 @end
