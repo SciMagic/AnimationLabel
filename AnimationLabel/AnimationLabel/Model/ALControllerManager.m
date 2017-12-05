@@ -7,7 +7,7 @@
 //
 
 #import "ALControllerManager.h"
-#import "ALBasicViewController.h"
+#import "ALCubeTransitionViewController.h"
 
 @implementation ALControllerManager
 
@@ -31,7 +31,7 @@
     
     if ([title isEqualToString:@"效果1"]) {
         
-        viewController = [[ALBasicViewController alloc] init];
+        viewController = [[ALCubeTransitionViewController alloc] init];
         
     }
     
