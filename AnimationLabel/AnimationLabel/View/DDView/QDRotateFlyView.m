@@ -12,7 +12,6 @@
 
 @interface QDRotateFlyView()
 
-//@property (nonatomic, strong) CATextLayer *textLayer;
 
 @property (nonatomic, strong) CBJStrokeLabel *outlineLabel1;
 @property (nonatomic, strong) CBJStrokeLabel *outlineLabel2;
@@ -48,10 +47,8 @@
         
 //        [self.layer addSublayer:gradientLayer];
         self.layer.mask = gradientLayer;
-//
 //        self.outlineLabel1.backgroundColor = [UIColor greenColor];
 //        self.outlineLabel1.backgroundColor = [UIColor yellowColor];
-
 //        self.backgroundColor = [UIColor redColor];
     }
     return self;
