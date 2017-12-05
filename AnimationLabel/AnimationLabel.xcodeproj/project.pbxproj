@@ -12,6 +12,8 @@
 		A025A72D1FD6455300BB68D5 /* QDRunTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A72B1FD6455300BB68D5 /* QDRunTextView.m */; };
 		A025A7301FD6457400BB68D5 /* QDDDAnimationTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A72F1FD6457400BB68D5 /* QDDDAnimationTextViewController.m */; };
 		A025A7331FD6458000BB68D5 /* CBJStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */; };
+		A025A7381FD6835D00BB68D5 /* ALFlickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A7371FD6835D00BB68D5 /* ALFlickerViewController.m */; };
+		A025A73E1FD683AE00BB68D5 /* ALFlickerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A73D1FD683AE00BB68D5 /* ALFlickerLabel.m */; };
 		A041904A1FD127840084D78E /* ALControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190491FD127840084D78E /* ALControllerManager.m */; };
 		A04190501FD128730084D78E /* ALBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A041904F1FD128730084D78E /* ALBasicViewController.m */; };
 		A06878781FD252300010C5DD /* ALCubeTransitionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A06878771FD252300010C5DD /* ALCubeTransitionLabel.m */; };
@@ -36,6 +38,10 @@
 		A025A7311FD6457F00BB68D5 /* CBJStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBJStrokeLabel.h; sourceTree = "<group>"; };
 		A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBJStrokeLabel.m; sourceTree = "<group>"; };
 		A025A7341FD6476F00BB68D5 /* ALAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAnimationProtocol.h; sourceTree = "<group>"; };
+		A025A7361FD6835D00BB68D5 /* ALFlickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALFlickerViewController.h; sourceTree = "<group>"; };
+		A025A7371FD6835D00BB68D5 /* ALFlickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALFlickerViewController.m; sourceTree = "<group>"; };
+		A025A73C1FD683AE00BB68D5 /* ALFlickerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALFlickerLabel.h; sourceTree = "<group>"; };
+		A025A73D1FD683AE00BB68D5 /* ALFlickerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALFlickerLabel.m; sourceTree = "<group>"; };
 		A04190481FD127840084D78E /* ALControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALControllerManager.h; sourceTree = "<group>"; };
 		A04190491FD127840084D78E /* ALControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALControllerManager.m; sourceTree = "<group>"; };
 		A041904E1FD128730084D78E /* ALBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBasicViewController.h; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 				A06878761FD252300010C5DD /* ALCubeTransitionLabel.h */,
 				A06878771FD252300010C5DD /* ALCubeTransitionLabel.m */,
 				A025A7341FD6476F00BB68D5 /* ALAnimationProtocol.h */,
+				A025A73C1FD683AE00BB68D5 /* ALFlickerLabel.h */,
+				A025A73D1FD683AE00BB68D5 /* ALFlickerLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +115,8 @@
 				A041904F1FD128730084D78E /* ALBasicViewController.m */,
 				A025A7241FD63EE100BB68D5 /* ALCubeTransitionViewController.h */,
 				A025A7251FD63EE100BB68D5 /* ALCubeTransitionViewController.m */,
+				A025A7361FD6835D00BB68D5 /* ALFlickerViewController.h */,
+				A025A7371FD6835D00BB68D5 /* ALFlickerViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -235,12 +245,14 @@
 				A0C9AA281FD1015E007C139E /* main.m in Sources */,
 				A025A72D1FD6455300BB68D5 /* QDRunTextView.m in Sources */,
 				A04190501FD128730084D78E /* ALBasicViewController.m in Sources */,
+				A025A73E1FD683AE00BB68D5 /* ALFlickerLabel.m in Sources */,
 				A025A7261FD63EE100BB68D5 /* ALCubeTransitionViewController.m in Sources */,
 				A025A7301FD6457400BB68D5 /* QDDDAnimationTextViewController.m in Sources */,
 				A025A72C1FD6455300BB68D5 /* QDRotateFlyView.m in Sources */,
 				A041904A1FD127840084D78E /* ALControllerManager.m in Sources */,
 				A0C9AA311FD10508007C139E /* ALModel.m in Sources */,
 				A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */,
+				A025A7381FD6835D00BB68D5 /* ALFlickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

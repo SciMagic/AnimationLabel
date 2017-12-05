@@ -8,6 +8,7 @@
 
 #import "ALControllerManager.h"
 #import "ALCubeTransitionViewController.h"
+#import "ALFlickerViewController.h"
 #import "QDDDAnimationTextViewController.h"
 @implementation ALControllerManager
 
@@ -32,6 +33,10 @@
     if ([title isEqualToString:@"效果1"]) {
         
         viewController = [[ALCubeTransitionViewController alloc] init];
+        
+    }else if([title isEqualToString:@"效果2"]){
+        
+        viewController = [[ALFlickerViewController alloc] init];
         
     }else if ([title isEqualToString:@"效果11_DD"] || [title isEqualToString:@"效果1_DD"]){
         
