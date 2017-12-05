@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A025A7261FD63EE100BB68D5 /* ALCubeTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A7251FD63EE100BB68D5 /* ALCubeTransitionViewController.m */; };
+		A025A72C1FD6455300BB68D5 /* QDRotateFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A72A1FD6455300BB68D5 /* QDRotateFlyView.m */; };
+		A025A72D1FD6455300BB68D5 /* QDRunTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A72B1FD6455300BB68D5 /* QDRunTextView.m */; };
+		A025A7301FD6457400BB68D5 /* QDDDAnimationTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A72F1FD6457400BB68D5 /* QDDDAnimationTextViewController.m */; };
+		A025A7331FD6458000BB68D5 /* CBJStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */; };
 		A041904A1FD127840084D78E /* ALControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190491FD127840084D78E /* ALControllerManager.m */; };
 		A04190501FD128730084D78E /* ALBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A041904F1FD128730084D78E /* ALBasicViewController.m */; };
 		A04190531FD12BF70084D78E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = A04190521FD12BF70084D78E /* TestView.m */; };
@@ -24,6 +28,14 @@
 /* Begin PBXFileReference section */
 		A025A7241FD63EE100BB68D5 /* ALCubeTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALCubeTransitionViewController.h; sourceTree = "<group>"; };
 		A025A7251FD63EE100BB68D5 /* ALCubeTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALCubeTransitionViewController.m; sourceTree = "<group>"; };
+		A025A7281FD6455300BB68D5 /* QDRotateFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDRotateFlyView.h; sourceTree = "<group>"; };
+		A025A7291FD6455300BB68D5 /* QDRunTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDRunTextView.h; sourceTree = "<group>"; };
+		A025A72A1FD6455300BB68D5 /* QDRotateFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDRotateFlyView.m; sourceTree = "<group>"; };
+		A025A72B1FD6455300BB68D5 /* QDRunTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDRunTextView.m; sourceTree = "<group>"; };
+		A025A72E1FD6457400BB68D5 /* QDDDAnimationTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDDDAnimationTextViewController.h; sourceTree = "<group>"; };
+		A025A72F1FD6457400BB68D5 /* QDDDAnimationTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDDDAnimationTextViewController.m; sourceTree = "<group>"; };
+		A025A7311FD6457F00BB68D5 /* CBJStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBJStrokeLabel.h; sourceTree = "<group>"; };
+		A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBJStrokeLabel.m; sourceTree = "<group>"; };
 		A04190481FD127840084D78E /* ALControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALControllerManager.h; sourceTree = "<group>"; };
 		A04190491FD127840084D78E /* ALControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALControllerManager.m; sourceTree = "<group>"; };
 		A041904E1FD128730084D78E /* ALBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALBasicViewController.h; sourceTree = "<group>"; };
@@ -57,9 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A025A7271FD6455300BB68D5 /* DDView */ = {
+			isa = PBXGroup;
+			children = (
+				A025A7281FD6455300BB68D5 /* QDRotateFlyView.h */,
+				A025A7291FD6455300BB68D5 /* QDRunTextView.h */,
+				A025A72A1FD6455300BB68D5 /* QDRotateFlyView.m */,
+				A025A72B1FD6455300BB68D5 /* QDRunTextView.m */,
+			);
+			path = DDView;
+			sourceTree = "<group>";
+		};
 		A041904B1FD128350084D78E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A025A7271FD6455300BB68D5 /* DDView */,
 				A04190511FD12BF70084D78E /* TestView.h */,
 				A04190521FD12BF70084D78E /* TestView.m */,
 				A06878761FD252300010C5DD /* ALCubeTransitionLabel.h */,
@@ -71,6 +95,8 @@
 		A041904D1FD128540084D78E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A025A72E1FD6457400BB68D5 /* QDDDAnimationTextViewController.h */,
+				A025A72F1FD6457400BB68D5 /* QDDDAnimationTextViewController.m */,
 				A041904E1FD128730084D78E /* ALBasicViewController.h */,
 				A041904F1FD128730084D78E /* ALBasicViewController.m */,
 				A025A7241FD63EE100BB68D5 /* ALCubeTransitionViewController.h */,
@@ -98,6 +124,8 @@
 		A0C9AA171FD1015D007C139E /* AnimationLabel */ = {
 			isa = PBXGroup;
 			children = (
+				A025A7311FD6457F00BB68D5 /* CBJStrokeLabel.h */,
+				A025A7321FD6458000BB68D5 /* CBJStrokeLabel.m */,
 				A041904D1FD128540084D78E /* ViewController */,
 				A041904B1FD128350084D78E /* View */,
 				A0C9AA2E1FD104DA007C139E /* Model */,
@@ -196,12 +224,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A025A7331FD6458000BB68D5 /* CBJStrokeLabel.m in Sources */,
 				A04190531FD12BF70084D78E /* TestView.m in Sources */,
 				A06878781FD252300010C5DD /* ALCubeTransitionLabel.m in Sources */,
 				A0C9AA1D1FD1015D007C139E /* ViewController.m in Sources */,
 				A0C9AA281FD1015E007C139E /* main.m in Sources */,
+				A025A72D1FD6455300BB68D5 /* QDRunTextView.m in Sources */,
 				A04190501FD128730084D78E /* ALBasicViewController.m in Sources */,
 				A025A7261FD63EE100BB68D5 /* ALCubeTransitionViewController.m in Sources */,
+				A025A7301FD6457400BB68D5 /* QDDDAnimationTextViewController.m in Sources */,
+				A025A72C1FD6455300BB68D5 /* QDRotateFlyView.m in Sources */,
 				A041904A1FD127840084D78E /* ALControllerManager.m in Sources */,
 				A0C9AA311FD10508007C139E /* ALModel.m in Sources */,
 				A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */,
