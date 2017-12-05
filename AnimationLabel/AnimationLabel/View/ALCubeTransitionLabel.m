@@ -120,7 +120,7 @@
 - (void)stopALAnimation
 {
     [self.firstLabel.layer removeAnimationForKey:@"ALAnimation"];
-    [self.secondLabel.layer removeAnimationForKey:@"ALAnimation"];
+    [self.secondLabel.layer removeAnimationForKey:@"ALAnimation_2"];
 }
 
 - (void)setALTimeOffset:(CGFloat)timeOffset
