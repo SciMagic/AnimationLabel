@@ -52,7 +52,6 @@
 - (void)startALAnimation
 {
     
-    
 }
 
 - (void)stopALAnimation
@@ -63,6 +62,7 @@
 - (void)sliderValueChanged:(UISlider *)slider
 {
     NSLog(@"the slider value is %f", slider.value);
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -116,6 +116,7 @@
     if (self = [super initWithFrame:frame]) {
         self.onlyDrawDirtyArea = NO;
         self.layerBased = YES;
+        self.disappearTail = NO;
     }
     return self;
 }
@@ -135,7 +136,14 @@
     [CATransaction commit];
 }
 
-
+- (void)animationCompleteAction {
+    
+    if (self.animatingAppear) {
+        [self startDisappearAnimation];
+    } else {
+        [self startAppearAnimation];
+    }
+}
 
 
 - (void) appearStateLayerChangesForTextInfo:(ALTextInfo *)textInfo
@@ -143,9 +151,10 @@
     if (textInfo.progress <= 0) {
         return;
     }
+    
     //0~0.5, run
     CGFloat realProgress = ([ZCEasingUtil easeOutWithStartValue:0 endValue:1 time:textInfo.progress < 0.5 ? textInfo.progress * 2 : 1]);
-    
+   
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
     CGPoint shouldBePosition = CGPointMake(CGRectGetMinX(textInfo.charRect), CGRectGetMinY(textInfo.charRect));
@@ -153,24 +162,10 @@
     ///根据进度，和本行剩余的距离，算出缓冲开始的水平坐标
     textLayer.position = CGPointMake(shouldBePosition.x + (1 - realProgress) * (self.bounds.size.width - shouldBePosition.x), shouldBePosition.y);
     textLayer.opacity = (textInfo.progress < 0.5) ? [ZCEasingUtil easeInWithStartValue:0 endValue:1 time:textInfo.progress * 2] : 1;
-    CGRect rect = CGRectMake(textLayer.position.x, textLayer.position.y, textInfo.charRect.size.width, textInfo.charRect.size.height);
-    //0~0.5 dash in
-    //0.5~1.0 break
-    CGFloat horizontalShiftValue = 0;
-    if (textInfo.progress < 0.5) {
-        horizontalShiftValue = [ZCEasingUtil easeOutWithStartValue:1 endValue:0.6 time:textInfo.progress * 2];
-    }
-    else {
-        horizontalShiftValue = [ZCEasingUtil bounceWithStiffness:5 numberOfBounces:1 time:(textInfo.progress - 0.5) / 0.5 shake:NO shouldOvershoot:YES startValue:0.6 endValue:0];
-    }
-    horizontalShiftValue *=  textInfo.derivedFont.pointSize * 0.4;
-    
-    textInfo.textInfoLayer.transform = [textInfo.textInfoLayer
-                                          transformToFitQuadTopLeft:CGPointMake(rect.origin.x + horizontalShiftValue, rect.origin.y)
-                                          topRight:CGPointMake(rect.origin.x + rect.size.width + horizontalShiftValue , rect.origin.y)
-                                          bottomLeft:CGPointMake(rect.origin.x, rect.origin.y + rect.size.height)
-                                          bottomRight:CGPointMake(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height)];
+
     [CATransaction commit];
+    
+    
 }
 
 - (void)disappearLayerStateChangesForTextInfo:(ALTextInfo *)textInfo {
@@ -185,26 +180,10 @@
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
     CGPoint shouldBePosition = CGPointMake(CGRectGetMinX(textInfo.charRect), CGRectGetMinY(textInfo.charRect));
     CALayer *textLayer = textInfo.textInfoLayer;
-    
-    textLayer.position = CGPointMake(shouldBePosition.x - (1 - realProgress) * shouldBePosition.x, shouldBePosition.y);
-    textLayer.opacity = (textInfo.progress < 0.5) ? [ZCEasingUtil easeInWithStartValue:0 endValue:1 time:textInfo.progress * 2] : 0;
-    CGRect rect = CGRectMake(textLayer.position.x, textLayer.position.y, textInfo.charRect.size.width, textInfo.charRect.size.height);
-    //0~0.5 dash in
-    //0.5~1.0 break
-    CGFloat horizontalShiftValue = 0;
-    if (textInfo.progress > 0.5) {
-        horizontalShiftValue = [ZCEasingUtil easeOutWithStartValue:1 endValue:0.6 time:textInfo.progress * 2];
-    }
-    else {
-        horizontalShiftValue = [ZCEasingUtil bounceWithStiffness:5 numberOfBounces:1 time:(textInfo.progress - 0.5) / 0.5 shake:NO shouldOvershoot:YES startValue:0.6 endValue:0];
-    }
-    horizontalShiftValue *=  textInfo.derivedFont.pointSize * 0.4;
-    
-    textInfo.textInfoLayer.transform = [textInfo.textInfoLayer
-                                        transformToFitQuadTopLeft:CGPointMake(rect.origin.x + horizontalShiftValue, rect.origin.y)
-                                        topRight:CGPointMake(rect.origin.x + rect.size.width + horizontalShiftValue , rect.origin.y)
-                                        bottomLeft:CGPointMake(rect.origin.x, rect.origin.y + rect.size.height)
-                                        bottomRight:CGPointMake(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height)];
+//    NSLog(@"realProgress:  %lf", realProgress);
+    textLayer.position = CGPointMake(shouldBePosition.x - realProgress * 100, shouldBePosition.y);
+    textLayer.opacity = (textInfo.progress < 0.5) ? [ZCEasingUtil easeOutWithStartValue:1 endValue:0 time:textInfo.progress * 2] : 0;
+
     [CATransaction commit];
 }
 

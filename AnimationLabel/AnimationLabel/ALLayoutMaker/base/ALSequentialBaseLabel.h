@@ -37,6 +37,8 @@ typedef NS_ENUM(NSInteger, ALSequentialLabelAppearDirection)
  */
 @property (nonatomic, readonly) CGFloat totoalAnimationDuration;
 
+@property (nonatomic, readonly) CGFloat animationProgress;
+
 /**
  * font, text, textColor, attributedString
  * similar to how it works in UILabel
@@ -51,6 +53,13 @@ typedef NS_ENUM(NSInteger, ALSequentialLabelAppearDirection)
  * default to NO
  */
 @property (nonatomic, assign) BOOL layerBased;
+
+
+/**
+ * If NO, disappear animation will start with the head of string
+ * default NO
+ */
+@property (nonatomic, assign) BOOL disappearTail;
 
 /**
  * If set to YES, will use a new random background color for each redraw
@@ -99,6 +108,8 @@ typedef NS_ENUM(NSInteger, ALSequentialLabelAppearDirection)
 - (void) revertAnimation;
 
 - (void)animationWithTimestamp:(CFTimeInterval)timeInterval;
+
+- (void)animationCompleteAction;
 
 /**
  * One time init after the layout is done, use customValue to retain custom attributes

@@ -64,12 +64,19 @@
     
     _debugTextInfoBounds = NO;
     _layerBased = NO;
+    _disappearTail = YES;
 }
 
 
 - (CGFloat)totoalAnimationDuration
 {
     return self.animationDurationTotal;
+}
+
+- (CGFloat)animationProgress {
+    
+    CGFloat progress = self.animationTime / self.animationDurationTotal;
+    return progress;
 }
 
 - (void)timerTick:(id) sender
@@ -80,20 +87,25 @@
 
 - (void)animationWithTimestamp:(CFTimeInterval)timeInterval {
     
-    NSLog(@"%lf", timeInterval);
     if (self.animationStarTime <= 0) {
         self.animationStarTime = timeInterval;
     }
     self.animationTime = timeInterval - self.animationStarTime;
+//    NSLog(@"%lf   ---   %lf", self.animationTime, self.animationDurationTotal);
+
     if (self.animationTime > self.animationDurationTotal) {
         self.displayLink.paused = YES;
         self.useDefaultDrawing = YES;
+        [self animationCompleteAction];
     }
     else { //update text attributeds array
         
         [self.layoutTool.textInfos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+           ///文字数据
             ALTextInfo *textInfo = self.layoutTool.textInfos[idx];
-            NSUInteger sequence = self.animatingAppear ? idx : (self.layoutTool.textInfos.count - idx - 1);
+            ///序号调整
+            NSUInteger sequence = self.animatingAppear || !self.disappearTail ? idx : (self.layoutTool.textInfos.count - idx - 1);
+            
             //udpate attribute according to progress
             CGFloat progress = 0;
             CGFloat startDelay = textInfo.startDelay > 0 ? textInfo.startDelay : sequence * self.animationDelay;
@@ -104,7 +116,7 @@
                 
                 ///结束
                 progress = 1;
-                textInfo.ended = YES; //ended
+//                textInfo.ended = YES; //ended
                 textInfo.progress = progress;
                 if (self.layerBased) {
                     [self updateViewStateWithTextInfo:textInfo];
@@ -462,6 +474,10 @@
 
 - (void) disappearLayerStateChangesForTextInfo: (ALTextInfo *) textInfo
 {
+    
+}
+
+- (void)animationCompleteAction {
     
 }
 /*

@@ -10,6 +10,7 @@
 #import "ALCubeTransitionViewController.h"
 #import "ALFlickerViewController.h"
 #import "QDDDAnimationTextViewController.h"
+#import "ALSequenceViewController.h"
 @implementation ALControllerManager
 
 + (instancetype)sharedInstance
@@ -43,6 +44,10 @@
         viewController = [[QDDDAnimationTextViewController alloc] init];
         viewController.title = title;
         
+    } else if ([title isEqualToString:@"效果3"]) {
+        
+        viewController = [[ALSequenceViewController alloc] init];
+        viewController.title = title;
     }
     
     if (viewController) {

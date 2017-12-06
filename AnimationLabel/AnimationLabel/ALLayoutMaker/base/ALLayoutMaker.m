@@ -218,7 +218,7 @@
                 textInfoLayer.frame = textInfo.charRect;
                 textInfoLayer.attributedString = subLineString;
                 textInfoLayer.backgroundColor = [UIColor clearColor].CGColor;
-                textInfo.textBlockLayer = textInfoLayer;
+                textInfo.textInfoLayer = textInfoLayer;
             }
         }];
         
