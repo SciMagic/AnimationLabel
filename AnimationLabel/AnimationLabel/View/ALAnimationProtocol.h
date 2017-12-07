@@ -10,13 +10,14 @@
 
 @protocol ALAnimationProtocol <NSObject>
 
-@optional
-
+@required
 - (void)startALAnimation;
 
 - (void)stopALAnimation;
 
 - (void)setALTimeOffset:(CGFloat)timeOffset;
+
+@optional
 
 - (void)setALRepeatCount:(NSUInteger)count;
 

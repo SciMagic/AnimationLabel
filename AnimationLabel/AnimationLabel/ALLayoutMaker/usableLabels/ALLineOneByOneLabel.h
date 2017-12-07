@@ -7,7 +7,8 @@
 //
 
 #import "ALSequentialBaseLabel.h"
+#import "ALAnimationProtocol.h"
 
-@interface ALLineOneByOneLabel : ALSequentialBaseLabel
+@interface ALLineOneByOneLabel : ALSequentialBaseLabel<ALAnimationProtocol>
 
 @end
