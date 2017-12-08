@@ -55,10 +55,12 @@
   
     UILabel *firstLabel = [[UILabel alloc] initWithFrame:self.bounds];
     self.firstLabel = firstLabel;
+    self.firstLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self addSubview:firstLabel];
     
     UILabel *secondLabel = [[UILabel alloc] initWithFrame:self.bounds];
     self.secondLabel = secondLabel;
+    self.secondLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     [self addSubview:secondLabel];
     
     CATransform3D fromValue_2 = CATransform3DMakeTranslation(0, self.bounds.size.height, 0);
