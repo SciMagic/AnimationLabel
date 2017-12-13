@@ -113,6 +113,12 @@ static NSString *const animationKey = @"animationKey";
     [self _layoutForChangedString];
 //    [self setNeedsDisplay];
 }
+
+- (void)setAttributedText:(NSAttributedString *)attributedText {
+    [super setAttributedText:attributedText];
+    [self _layoutForChangedString];
+}
+
 /**    主要是高度fit    */
 - (void) sizeToFit
 {
