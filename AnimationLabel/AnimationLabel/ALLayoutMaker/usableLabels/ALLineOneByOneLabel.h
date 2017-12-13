@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Hacky. All rights reserved.
 //
 
-#import "ALSequentialBaseLabel.h"
+#import "ALFineDrewAnimationBaseLabel.h"
 #import "ALAnimationProtocol.h"
 
-@interface ALLineOneByOneLabel : ALSequentialBaseLabel<ALAnimationProtocol>
+@interface ALLineOneByOneLabel : ALFineDrewAnimationBaseLabel<ALAnimationProtocol>
 
 @end
