@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void) drawInContext:(CGContextRef)ctx
+- (void)drawInContext:(CGContextRef)ctx
 {
     UIGraphicsPushContext(ctx);
     [self.attributedString drawInRect:self.bounds];

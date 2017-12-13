@@ -7,11 +7,11 @@
 //
 
 #import "ALSequenceViewController.h"
-#import "ALLineOneByOneLabel.h"
+#import "ALFineDrewAnimationBaseLabel.h"
 
 @interface ALSequenceViewController ()
 
-@property (nonatomic, strong) ALLineOneByOneLabel *oneLabel;
+@property (nonatomic, strong) ALFineDrewAnimationBaseLabel *oneLabel;
 
 @end
 
@@ -28,8 +28,8 @@
     [self.view addSubview:stopButton];
     
     
-    _oneLabel = [[ALLineOneByOneLabel alloc] initWithFrame:CGRectMake(0, 0, 375, 300)];
-    _oneLabel.text = @"When nd yet shall mourn with ever-returning spring.\n我哀悼着，并将随着一年一度的春光永远地哀悼着。";
+    _oneLabel = [[ALFineDrewAnimationBaseLabel alloc] initWithFrame:CGRectMake(100, 0, 275, 300)];
+    _oneLabel.text = @"一年一度的春光永远地哀悼着。";
   
     [self.view addSubview:_oneLabel];
     [_oneLabel sizeToFit];
@@ -43,22 +43,21 @@
 
 - (void)startALAnimation
 {
-    [_oneLabel startAppearAnimation];
+    [_oneLabel startALAnimation];
 }
 
 - (void)stopALAnimation
 {
-    [_oneLabel revertAnimation];
+    [_oneLabel stopALAnimation];
 }
 
 - (void)backALAnimation {
     
-    [_oneLabel startDisappearAnimation];
 }
 
 - (void)sliderValueChanged:(UISlider *)slider
 {
-    [_oneLabel animationWithTimestamp:slider.value * 10];
+    [_oneLabel setALTimeOffset:slider.value * 0.5];
 }
 
 - (void)didReceiveMemoryWarning {

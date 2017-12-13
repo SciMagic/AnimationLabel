@@ -25,6 +25,7 @@
 		A0C9AA281FD1015E007C139E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA271FD1015E007C139E /* main.m */; };
 		A0C9AA311FD10508007C139E /* ALModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C9AA301FD10508007C139E /* ALModel.m */; };
 		E40B5D021FD7BE370048827E /* ALSequenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40B5D011FD7BE370048827E /* ALSequenceViewController.m */; };
+		E44C00BE1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E44C00BD1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.m */; };
 		E4DBF07D1FD286D100823381 /* ALLayoutMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */; };
 		E4DBF0801FD64F8700823381 /* ZCEasingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF07F1FD64F8700823381 /* ZCEasingUtil.m */; };
 		E4DBF0831FD670FC00823381 /* ALSequentialBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DBF0821FD670FC00823381 /* ALSequentialBaseLabel.m */; };
@@ -67,6 +68,8 @@
 		A0C9AA301FD10508007C139E /* ALModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALModel.m; sourceTree = "<group>"; };
 		E40B5D001FD7BE370048827E /* ALSequenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALSequenceViewController.h; sourceTree = "<group>"; };
 		E40B5D011FD7BE370048827E /* ALSequenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALSequenceViewController.m; sourceTree = "<group>"; };
+		E44C00BC1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALFineDrewAnimationBaseLabel.h; sourceTree = "<group>"; };
+		E44C00BD1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALFineDrewAnimationBaseLabel.m; sourceTree = "<group>"; };
 		E4DBF07B1FD286D100823381 /* ALLayoutMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLayoutMaker.h; sourceTree = "<group>"; };
 		E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLayoutMaker.m; sourceTree = "<group>"; };
 		E4DBF07E1FD64F8700823381 /* ZCEasingUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCEasingUtil.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				E4DBF07C1FD286D100823381 /* ALLayoutMaker.m */,
 				E4DBF0811FD670FC00823381 /* ALSequentialBaseLabel.h */,
 				E4DBF0821FD670FC00823381 /* ALSequentialBaseLabel.m */,
+				E44C00BC1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.h */,
+				E44C00BD1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				A041904A1FD127840084D78E /* ALControllerManager.m in Sources */,
 				E4DBF07D1FD286D100823381 /* ALLayoutMaker.m in Sources */,
 				A0C9AA311FD10508007C139E /* ALModel.m in Sources */,
+				E44C00BE1FDA352C00EDA500 /* ALFineDrewAnimationBaseLabel.m in Sources */,
 				A0C9AA1A1FD1015D007C139E /* AppDelegate.m in Sources */,
 				A025A7381FD6835D00BB68D5 /* ALFlickerViewController.m in Sources */,
 			);

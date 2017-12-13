@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, ALLayoutGroupType)
 @property (nonatomic, assign) CGFloat duration;
 
 @property (nonatomic, strong) ALTextInfoLayer *textInfoLayer;
+@property (nonatomic, copy) NSArray< CAAnimation *>* contentAnimations;
+@property (nonatomic, strong) NSString *animationKey;
 
 /**
  * place holder for customValue
