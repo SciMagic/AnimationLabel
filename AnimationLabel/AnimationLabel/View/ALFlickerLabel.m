@@ -72,6 +72,7 @@
 {
     
     CBJStrokeLabel *strokeLabel = [[CBJStrokeLabel alloc] initWithFrame:self.bounds];
+    strokeLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     strokeLabel.outlineColor = [UIColor whiteColor];
     strokeLabel.textColor = [UIColor colorWithRed:240.f/255.f green:67.f/255.f blue:146.f/255.f alpha:1];
     strokeLabel.outlineScale = 0.2;

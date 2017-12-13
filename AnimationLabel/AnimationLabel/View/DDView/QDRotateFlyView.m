@@ -38,8 +38,6 @@ static NSString  * const animationKey2 = @"animationKey2";
         [self addSubview:self.outlineLabel1];
         self.outlineLabel2 = [CBJStrokeLabel new];
         [self addSubview:self.outlineLabel2];
-//        self.clipsToBounds = YES;
-//        self.layer.opacity
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = CGRectMake(-self.bounds.size.width*0.3/2.0, 0, self.bounds.size.width*1.3, self.bounds.size.height);
         gradientLayer.colors = @[
@@ -155,7 +153,6 @@ static NSString  * const animationKey2 = @"animationKey2";
     animationTransform2.keyTimes = @[@0.0f,@0.425f,@0.575f,@0.725,@1.f];
     
     animationGroup2.animations = @[animationmoveUp2,animationTransform2];
-//    [self.outlineLabel2.layer addAnimation:animationGroup2 forKey:nil];
     self.animation1 = animationGroup1;
     self.animation2 = animationGroup2;
 }
